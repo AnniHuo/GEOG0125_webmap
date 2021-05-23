@@ -1,7 +1,7 @@
 ## MODULE CODE: GEOG0125
 ## MODULE NAME: Advanced Topics in Social and Geographic Data Science
 
-http://178.79.152.249/zczlah6/
+https://annihuo.github.io/GEOG0125_webmap/
 
 This is the project about:
 Fast-food outlets distribution in London
