@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+   <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="favicon" href=""/>
+    <!--custom css -->
+    <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"/>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+    </script>
+    <title>GEOG0125: Mapping</title>
+
+   </head>
+
+   <!--content -->
+   <body>
+
+     <!--simple leaflet map-->
+     <div class="container mb-3">
+       <br />
+
+       <h1>"SMART" FAST FOOD DISTRIBUTION</h1>
+       <br />
+       <br />
+       <br />
+       <p class="text-justify">
+         <em>
+         Food type availability could largely influence the obesity disparities across metropolitan regions. It has become a common phenomenon among office workers to consume fast food, which is associated with malnutrition and obesity, further causing low performance and absenteeism. Therefore, the distribution of fast-food outlets in London might seriously affect the obesity epidemic among workers. The interactive maps bellow will examine the current distribution of fast-food outlets and integrate with employment condition in administrative areas in London to discover potential relations, in order to benefit future workplace health intervention.
+         </em>
+       </p>
+       <br />
+       <br />
+       <br />
+       <div>
+     <div class="container mb-3">
+
+       <h2>Map Items</h2>
+       <br />
+       <p class="text-justify">
+         The choropleth map layers have represented the employment rates in London at different levels (including Middle Layer Super Output Area (MSOA)-level and Lower Layer Super Output Areas (LSOA)-level). Besides, the fast-food outlets locations have been displayed by ‘black’ points. By switching the layers, the relationships between fast-food outlets and employment condition at different administrative levels can be apparently discovered by changing overlay choices. The map uses quintiles to divide gradient colors (0.44, 0.48, 0.51, 0.55), which are the same at these administrative levels.
+       </p>
+     </div>
+     <div class="container mb-3">
+       <br />
+       <br />
+       <h2>Insights</h2>
+       <br />
+       <p class="text-justify">
+         It is apparent that areas with higher fast-food density also have higher employment rate. Overall, this phenomenon reflects the location selection strategy of the fast-food restaurants to a certain extent and indicates the unhealthy environment exposure for workers. In that case, local planning regulations should be taken as a weapon to benefit them.
+       </p>
+       <br />
+       <br />
+     </div>
+
+         <div id="choropleth" class="card-body p-0">
+           <canvas width="150" height="500"></canvas>
+           <!--map js-->
+           <script src="msoa_emp.geojson"></script>
+           <script src="lsoa_emp.geojson"></script>
+           <script src="fast_food_points.geojson"></script>
+
+           <script src="choropleth.js"></script>
+
+         </div>
+
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="container mb-3">
+      <br />
+      <br />
+      <h2>Dataset Sources</h2>
+      <br />
+      <p class="text-justify">
+
+        <li><a href="http://download.geofabrik.de/europe/great-britain/england.html ">GEOFABRIK (2021). Download OpenStreetMap data for this region: England.</a></li>
+        <li><a href="https://data.london.gov.uk/dataset/obesity-adults ">London Datastore (2013). Obesity in Adults.</a></li>
+        <li><a href="https://data.london.gov.uk/dataset/msoa-atlas ">London Datastore (2021). MSOA Atlas.</a></li>
+        <li><a href="https://data.london.gov.uk/dataset/lsoa-atlas">London Datastore (2021). LSOA Atlas. </a></li>
+
+      </p>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+   </body>
+</html>
